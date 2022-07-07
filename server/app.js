@@ -6,22 +6,21 @@ const app = express();
 
 app.get('/localities', async (req, res) => {
   try {
-    console.log(process.env.API_URL, process.env.API_KEY);
+
     const response = await axios.get(
-      `${process.env.API_URL}/postcode/search.json`,
+      `${process.env.AUS_POST_API_URL}/postcode/search.json`,
       {
         params: {
           q: req.query.suburb,
           state: req.query.state
         },
         headers: {
-          'auth-key': process.env.API_KEY
+          'auth-key': process.env.AUS_POST_API_KEY
         }
       }
     );
     res.status(200).json(response.data);
   } catch (err) {
-    console.log(err);
     res.status(500).json({ message: err });
   }
 });
