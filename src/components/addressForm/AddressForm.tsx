@@ -6,7 +6,6 @@ import { FC, FormEvent, useReducer, ChangeEvent, useState } from 'react';
 import InputField from '../inputField/InputField';
 import Select from '../select/Select';
 import states from './states.json';
-import { IOption } from '../select/Select';
 import { getLocalities } from '../../services/api';
 
 const initialFormValues = {
@@ -140,8 +139,9 @@ const AddressForm: FC = () => {
           name="state"
           label="State"
           value={formValues.state}
-          options={states as IOption[]}
+          options={states}
           onChange={handleInputChange}
+          placeholder="Select state"
         />
         <button type="submit">Validate</button>
       </form>

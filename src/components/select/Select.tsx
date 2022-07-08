@@ -3,17 +3,19 @@
  */
 import { ChangeEvent, FC } from 'react';
 
-export interface IOption {
-  key: string;
-  name: string;
-}
-
 interface IProps {
-  options: IOption[];
+  /** List of options in Select */
+  options: Record<string, string>;
+  /** Name for Select attribute */
   name: string;
+  /** Label content to display */
   label: string;
+  /** Value selected in select */
   value: string;
+  /** Callback fired when the value is changed */
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  /** Input placeholder value */
+  placeholder: string;
 }
 
 const Select: FC<IProps> = (props) => {
@@ -25,11 +27,13 @@ const Select: FC<IProps> = (props) => {
 
       <select {...rest}>
         <option value="">Select a state</option>
-        {options.map((option) => (
-          <option key={option.key} value={option.key}>
-            {option.name}
-          </option>
-        ))}
+        {Object.keys(options).map((option) => {
+          return (
+            <option key={option} value={option}>
+              {options[option]}
+            </option>
+          );
+        })}
       </select>
     </div>
   );
