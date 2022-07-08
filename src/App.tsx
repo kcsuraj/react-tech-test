@@ -1,11 +1,7 @@
+import { FC } from 'react';
+
 import AddressForm from './components/addressForm/AddressForm';
 
-function App() {
-  return (
-    <div>
-      <AddressForm />
-    </div>
-  );
-}
+const App: FC = () => <AddressForm />;
 
 export default App;
