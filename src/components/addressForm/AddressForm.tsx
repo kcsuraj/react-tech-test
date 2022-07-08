@@ -128,14 +128,22 @@ const AddressForm: FC = () => {
     handleAddressValidation();
   };
 
+  /**
+   * Clear form inputs and validation message
+   */
+  const handleFormReset = () => {
+    setFormValues(initialFormValues);
+    setValidationMessage('');
+  };
+
   return (
     <div className="container">
       <div className="form__header">
         <h1 className="form__header__title">Australia Location Validator</h1>
       </div>
-      <form className='form__fields' onSubmit={handleFormSubmit}>
+      <form className="form__fields" onSubmit={handleFormSubmit}>
         <InputField
-          type="text"
+          type="number"
           name="postcode"
           value={formValues.postcode}
           label="Postal code"
@@ -162,9 +170,12 @@ const AddressForm: FC = () => {
           placeholder="Select state"
           required={true}
         />
-        <div className="form__footer">
-          <button type="submit" className="form__footer__button">
+        <div>
+          <button type="submit" className="button button--primary">
             Validate
+          </button>
+          <button onClick={handleFormReset} className="button button--outline">
+            Reset
           </button>
         </div>
       </form>

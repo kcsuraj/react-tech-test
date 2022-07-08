@@ -18,15 +18,22 @@
   &__fields {
     margin-bottom: 24px;
   }
+}
 
-  &__footer {
-    &__button {
-      background-color: $primary;
-      border-color: transparent;
-      font-size: 16px;
-      padding: 6px 12px;
-      color: #fff;
-      width: 100%;
-    }
+.button {
+  border-color: transparent;
+  font-size: 16px;
+  padding: 8px 24px;
+  color: #fff;
+  margin-right: 20px;
+  border-radius: 3px;
+
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--outline {
+    border: 1px solid #dbdbdb;
+    color: $text-primary;
   }
 }
