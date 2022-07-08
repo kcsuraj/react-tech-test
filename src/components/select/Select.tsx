@@ -25,7 +25,7 @@ const Select: FC<IProps> = (props) => {
     <div>
       <label>{label}</label>
 
-      <select {...rest}>
+      <select {...rest} data-testid="select">
         <option value="">Select a state</option>
         {Object.keys(options).map((option) => {
           return (

@@ -1,0 +1,218 @@
+{
+  "localities": {
+    "locality": [
+      {
+        "category": "Delivery Area",
+        "id": 13940,
+        "latitude": -31.95825633,
+        "location": "EAST PERTH",
+        "longitude": 115.8771621,
+        "postcode": 6004,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15700,
+        "location": "EAST PERTH",
+        "postcode": 6892,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 13943,
+        "latitude": -31.92711078,
+        "location": "NORTH PERTH",
+        "longitude": 115.8530299,
+        "postcode": 6006,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15707,
+        "location": "NORTH PERTH",
+        "postcode": 6906,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 13935,
+        "latitude": -31.95394665,
+        "location": "PERTH",
+        "longitude": 115.8582344,
+        "postcode": 6000,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 13937,
+        "location": "PERTH",
+        "postcode": 6001,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15679,
+        "location": "PERTH",
+        "postcode": 6800,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15684,
+        "location": "PERTH",
+        "postcode": 6837,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15685,
+        "location": "PERTH",
+        "postcode": 6838,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15686,
+        "location": "PERTH",
+        "postcode": 6839,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15687,
+        "location": "PERTH",
+        "postcode": 6840,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15688,
+        "location": "PERTH",
+        "postcode": 6841,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15689,
+        "location": "PERTH",
+        "postcode": 6842,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15690,
+        "location": "PERTH",
+        "postcode": 6843,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15691,
+        "location": "PERTH",
+        "postcode": 6844,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15692,
+        "location": "PERTH",
+        "postcode": 6845,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15693,
+        "location": "PERTH",
+        "postcode": 6846,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15694,
+        "location": "PERTH",
+        "postcode": 6847,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15695,
+        "location": "PERTH",
+        "postcode": 6848,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 14173,
+        "latitude": -31.94422713,
+        "location": "PERTH AIRPORT",
+        "longitude": 115.9721763,
+        "postcode": 6105,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15696,
+        "location": "PERTH BC",
+        "postcode": 6849,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 13936,
+        "latitude": -31.9534613,
+        "location": "PERTH GPO",
+        "longitude": 115.8536536,
+        "postcode": 6000,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15683,
+        "location": "PERTH ST GEORGES TCE",
+        "postcode": 6831,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 14236,
+        "latitude": -31.98157802,
+        "location": "SOUTH PERTH",
+        "longitude": 115.8640437,
+        "postcode": 6151,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15742,
+        "location": "SOUTH PERTH",
+        "postcode": 6951,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 14237,
+        "latitude": -31.980787,
+        "location": "SOUTH PERTH ANGELO ST",
+        "longitude": 115.862829,
+        "postcode": 6151,
+        "state": "WA"
+      },
+      {
+        "category": "Delivery Area",
+        "id": 13942,
+        "latitude": -31.94604689,
+        "location": "WEST PERTH",
+        "longitude": 115.8455395,
+        "postcode": 6005,
+        "state": "WA"
+      },
+      {
+        "category": "Post Office Boxes",
+        "id": 15699,
+        "location": "WEST PERTH",
+        "postcode": 6872,
+        "state": "WA"
+      }
+    ]
+  }
+}

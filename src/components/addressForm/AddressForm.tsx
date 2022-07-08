@@ -2,6 +2,7 @@
  * Implement a address form and validate if it is valid address
  */
 import { FC, FormEvent, useReducer, ChangeEvent, useState } from 'react';
+import axios from 'axios';
 
 import InputField from '../inputField/InputField';
 import Select from '../select/Select';
@@ -71,6 +72,7 @@ const AddressForm: FC = () => {
   const handleAddressValidation = async () => {
     try {
       const { data } = await getLocalities(formValues.suburb, formValues.state);
+
       const locality = data?.localities?.locality;
       let isPostCodeValid = false;
       let isSuburbValid = false;
