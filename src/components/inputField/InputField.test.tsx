@@ -16,6 +16,7 @@ describe('a InputField', () => {
         label="Postal code"
         placeholder="Enter postcode"
         onChange={handleOnChange}
+        required={true}
       />
     );
     const element = screen.getByPlaceholderText('Enter postcode');

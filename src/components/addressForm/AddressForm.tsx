@@ -7,6 +7,7 @@ import InputField from '../inputField/InputField';
 import Select from '../select/Select';
 import states from './states.json';
 import { getLocalities } from '../../services/api';
+import { AxiosError } from 'axios';
 
 const initialFormValues = {
   postcode: '',
@@ -97,8 +98,9 @@ const AddressForm: FC = () => {
       } else {
         setValidationMessage(messages.suburbError);
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err: unknown) {
+      const error = err as AxiosError;
+      setValidationMessage(error?.message);
     }
   };
 
@@ -134,6 +136,7 @@ const AddressForm: FC = () => {
           label="Postal code"
           placeholder="Enter postcode"
           onChange={handleInputChange}
+          required={true}
         />
         <InputField
           type="text"
@@ -142,6 +145,7 @@ const AddressForm: FC = () => {
           label="Suburb"
           placeholder="Enter Suburb"
           onChange={handleInputChange}
+          required={true}
         />
 
         <Select
@@ -151,6 +155,7 @@ const AddressForm: FC = () => {
           options={states}
           onChange={handleInputChange}
           placeholder="Select state"
+          required={true}
         />
         <button type="submit">Validate</button>
       </form>

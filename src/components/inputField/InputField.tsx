@@ -15,13 +15,15 @@ interface IProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** Value selected in select */
   value: string;
+  /** true if input field required */
+  required: boolean;
 }
 
-const InputField: FC<IProps> = (props) => {
+const InputField: FC<IProps> = ({ required = false, ...rest }) => {
   return (
     <div>
-      <label htmlFor={props.name}>{props.label}</label>
-      <input {...props} />
+      <label htmlFor={rest.name}>{rest.label}</label>
+      <input required={required} {...rest} />
     </div>
   );
 };
