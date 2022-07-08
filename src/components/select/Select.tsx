@@ -1,3 +1,6 @@
+/**
+ * Select box to allow user to select an option from list of options
+ */
 import { ChangeEvent, FC } from 'react';
 
 export interface IOption {
