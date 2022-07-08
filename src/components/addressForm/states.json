@@ -1,34 +1,10 @@
-[
-  {
-    "key": "ACT",
-    "name": "Australian Capital Territory"
-  },
-  {
-    "key": "NSW",
-    "name": "New South Wales"
-  },
-  {
-    "key": "NT",
-    "name": "Northern Territory"
-  },
-  {
-    "key": "QLD",
-    "name": "Queensland"
-  },
-  {
-    "key": "SA",
-    "name": "South Australia"
-  },
-  {
-    "key": "TAS",
-    "name": "Tasmania"
-  },
-  {
-    "key": "VIC",
-    "name": "Victoria"
-  },
-  {
-    "key": "WA",
-    "name": "Western Australia"
-  }
-]
+{
+  "ACT": "Australian Capital Territory",
+  "NSW": "New South Wales",
+  "NT": "Northern Territory",
+  "QLD": "Queensland",
+  "SA": "South Australia",
+  "TAS": "Tasmania",
+  "VIC": "Victoria",
+  "WA": "Western Australia"
+}
