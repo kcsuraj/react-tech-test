@@ -1,0 +1,8 @@
+@import '../../styles/colors.scss';
+
+.alert {
+  color: #fff;
+  background-color: $warning;
+  padding: 6px 12px;
+  color: $text-primary;
+}

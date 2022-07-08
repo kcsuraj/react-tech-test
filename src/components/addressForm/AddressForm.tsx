@@ -2,12 +2,14 @@
  * Implement a address form and validate if it is valid address
  */
 import { FC, FormEvent, useReducer, ChangeEvent, useState } from 'react';
+import { AxiosError } from 'axios';
 
 import InputField from '../inputField/InputField';
 import Select from '../select/Select';
 import states from './states.json';
 import { getLocalities } from '../../services/api';
-import { AxiosError } from 'axios';
+import './AddressForm.scss';
+import Alert from '../Alert/Alert';
 
 const initialFormValues = {
   postcode: '',
@@ -127,8 +129,11 @@ const AddressForm: FC = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
+    <div className="container">
+      <div className="form__header">
+        <h1 className="form__header__title">Australia Location Validator</h1>
+      </div>
+      <form className='form__fields' onSubmit={handleFormSubmit}>
         <InputField
           type="text"
           name="postcode"
@@ -157,10 +162,14 @@ const AddressForm: FC = () => {
           placeholder="Select state"
           required={true}
         />
-        <button type="submit">Validate</button>
+        <div className="form__footer">
+          <button type="submit" className="form__footer__button">
+            Validate
+          </button>
+        </div>
       </form>
 
-      <div>{validationMessage}</div>
+      {validationMessage && <Alert text={validationMessage} />}
     </div>
   );
 };
