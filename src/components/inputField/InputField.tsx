@@ -2,6 +2,7 @@
  * Input field to let user enter and edit texts
  */
 import { ChangeEvent, FC } from 'react';
+
 import './InputField.scss';
 
 interface IProps {
