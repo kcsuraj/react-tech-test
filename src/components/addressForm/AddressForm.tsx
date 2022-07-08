@@ -2,7 +2,6 @@
  * Implement a address form and validate if it is valid address
  */
 import { FC, FormEvent, useReducer, ChangeEvent, useState } from 'react';
-import axios from 'axios';
 
 import InputField from '../inputField/InputField';
 import Select from '../select/Select';
