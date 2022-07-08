@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+
+.container {
+  max-width: 600px;
+  margin: 48px auto;
+}
+
+.form {
+  &__header {
+    margin-bottom: 36px;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &__fields {
+    margin-bottom: 24px;
+  }
+
+  &__footer {
+    &__button {
+      background-color: $primary;
+      border-color: transparent;
+      font-size: 16px;
+      padding: 6px 12px;
+      color: #fff;
+      width: 100%;
+    }
+  }
+}

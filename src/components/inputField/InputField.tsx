@@ -2,6 +2,7 @@
  * Input field to let user enter and edit texts
  */
 import { ChangeEvent, FC } from 'react';
+import './InputField.scss';
 
 interface IProps {
   /** Name for Select attribute */
@@ -21,9 +22,11 @@ interface IProps {
 
 const InputField: FC<IProps> = ({ required = false, ...rest }) => {
   return (
-    <div>
-      <label htmlFor={rest.name}>{rest.label}</label>
-      <input required={required} {...rest} />
+    <div className="form-group">
+      <label className="form-group__label" htmlFor={rest.name}>
+        {rest.label}
+      </label>
+      <input className="form-group__input" required={required} {...rest} />
     </div>
   );
 };

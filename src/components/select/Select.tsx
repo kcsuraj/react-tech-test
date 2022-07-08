@@ -3,6 +3,8 @@
  */
 import { ChangeEvent, FC } from 'react';
 
+import './Select.scss';
+
 interface IProps {
   /** List of options in Select */
   options: Record<string, string>;
@@ -24,10 +26,10 @@ const Select: FC<IProps> = (props) => {
   const { options, label, required, ...rest } = props;
 
   return (
-    <div>
-      <label>{label}</label>
+    <div className='form-group'>
+      <label className="form-group__label">{label}</label>
 
-      <select {...rest} data-testid="select" required={required}>
+      <select className="select-box" {...rest} data-testid="select" required={required}>
         <option value="">Select a state</option>
         {Object.keys(options).map((option) => {
           return (
