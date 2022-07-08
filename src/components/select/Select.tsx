@@ -16,16 +16,18 @@ interface IProps {
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
   /** Input placeholder value */
   placeholder: string;
+  /** true if input field required */
+  required: boolean;
 }
 
 const Select: FC<IProps> = (props) => {
-  const { options, label, ...rest } = props;
+  const { options, label, required, ...rest } = props;
 
   return (
     <div>
       <label>{label}</label>
 
-      <select {...rest} data-testid="select">
+      <select {...rest} data-testid="select" required={required}>
         <option value="">Select a state</option>
         {Object.keys(options).map((option) => {
           return (
