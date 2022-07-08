@@ -1,3 +1,6 @@
+/**
+ * Component to display alert messages
+ */
 import { FC } from 'react';
 import './Alert.scss';
 

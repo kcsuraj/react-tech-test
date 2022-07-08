@@ -32,11 +32,15 @@ Create a copy of `.env.sample` as`.env`file with following environment variables
 - REACT_APP_API_URL: Backend api url. Default is http://localhost:8000
 
 ## Development
+- Start node server using `npm run serve`
+- Start frontend client using `npm run start`
+
+**Available script**
 
 | Npm Script | Description                                                       |
 | ---------- | ----------------------------------------------------------------- |
-| `start`    | Run app in development mode and with auto reload onf file changes |
+| `start`    | Run client app in development mode                                |
 | `build`    | Build files for production mode                                   |
 | `serve`    | Start node server in default port 8000                            |
 | `test`     | Run test cases                                                    |
-| `format`   | Format files using prettier                             |
+| `format`   | Format files using prettier                                       |

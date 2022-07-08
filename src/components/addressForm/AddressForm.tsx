@@ -9,7 +9,7 @@ import Select from '../select/Select';
 import states from './states.json';
 import { getLocalities } from '../../services/api';
 import './AddressForm.scss';
-import Alert from '../Alert/Alert';
+import Alert from '../alert/Alert';
 
 const initialFormValues = {
   postcode: '',
