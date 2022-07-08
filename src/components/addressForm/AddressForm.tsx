@@ -28,6 +28,14 @@ const AddressForm: FC = () => {
   );
   const [validationMessage, setValidationMessage] = useState('');
 
+  const messages = {
+    postcodeError: `The postcode ${formValues.postcode} does not match the suburb ${formValues.suburb}.`,
+    suburbError: `The suburb ${formValues.suburb} does not exist in the state ${
+      states[formValues.state as keyof typeof states]
+    }.`,
+    validAddress: 'The postcode, suburb and state entered are valid.'
+  };
+
   /**
    * Check validity of postcode
    *
@@ -58,10 +66,10 @@ const AddressForm: FC = () => {
     isSuburbValid: boolean
   ) => {
     return !isPostCodeValid
-      ? `The postcode ${formValues.postcode} does not match the suburb Broadway.`
+      ? messages.postcodeError
       : !isSuburbValid
-      ? `The suburb ${formValues.suburb} does not exist in the state ${formValues.state}.`
-      : 'The postcode, suburb and state entered are valid.';
+      ? messages.suburbError
+      : messages.validAddress;
   };
 
   /**
@@ -87,7 +95,7 @@ const AddressForm: FC = () => {
           getValidationMessage(isPostCodeValid, isSuburbValid)
         );
       } else {
-        setValidationMessage('The address is not valid.');
+        setValidationMessage(messages.suburbError);
       }
     } catch (error) {
       console.log(error);
