@@ -26,10 +26,18 @@ const Select: FC<IProps> = (props) => {
   const { options, label, required, ...rest } = props;
 
   return (
-    <div className='form-group'>
-      <label className="form-group__label">{label}</label>
+    <div className="form-group">
+      <label className="form-group__label" htmlFor={rest.name}>
+        {label}
+      </label>
 
-      <select className="select-box" {...rest} data-testid="select" required={required}>
+      <select
+        className="select-box"
+        data-testid="select"
+        id={rest.name}
+        required={required}
+        {...rest}
+      >
         <option value="">Select a state</option>
         {Object.keys(options).map((option) => {
           return (

@@ -26,7 +26,12 @@ const InputField: FC<IProps> = ({ required = false, ...rest }) => {
       <label className="form-group__label" htmlFor={rest.name}>
         {rest.label}
       </label>
-      <input className="form-group__input" required={required} {...rest} />
+      <input
+        className="form-group__input"
+        required={required}
+        {...rest}
+        id={rest.name}
+      />
     </div>
   );
 };
