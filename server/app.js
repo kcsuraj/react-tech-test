@@ -4,9 +4,17 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+
 app.get('/localities', async (req, res) => {
   try {
-
     const response = await axios.get(
       `${process.env.AUS_POST_API_URL}/postcode/search.json`,
       {
