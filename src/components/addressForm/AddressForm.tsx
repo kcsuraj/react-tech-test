@@ -1,3 +1,6 @@
+/**
+ * Implement a address form and validate if it is valid address
+ */
 import { FC, FormEvent, useReducer, ChangeEvent, useState } from 'react';
 
 import InputField from '../inputField/InputField';
@@ -26,12 +29,31 @@ const AddressForm: FC = () => {
   );
   const [validationMessage, setValidationMessage] = useState('');
 
+  /**
+   * Check validity of postcode
+   *
+   * @param locality Locality details
+   * @returns true if postcode entered in form matches with postcode in locality
+   */
   const validatePostCode = (locality: Locality) =>
     parseInt(formValues.postcode) === locality.postcode;
 
+  /**
+   * Check validity of suburb
+   *
+   * @param locality Locality details
+   * @returns true if suburb entered in form matches with suburb in locality
+   */
   const validateSuburb = (locality: Locality) =>
     formValues.suburb.toLowerCase() === locality.location.toLowerCase();
 
+  /**
+   * Validation message bases on whether postcode and suburb are valid
+   *
+   * @param isPostCodeValid true if postCode matches with Suburb
+   * @param isSuburbValid true if suburb matches with state
+   * @returns validation message to display on form submission
+   */
   const getValidationMessage = (
     isPostCodeValid: boolean,
     isSuburbValid: boolean
@@ -43,6 +65,10 @@ const AddressForm: FC = () => {
       : 'The postcode, suburb and state entered are valid.';
   };
 
+  /**
+   * Handle validation of form fields ie postcode, suburb and state with API
+   * and display appropriate validation message
+   */
   const handleAddressValidation = async () => {
     try {
       const { data } = await getLocalities(formValues.suburb, formValues.state);
@@ -68,6 +94,11 @@ const AddressForm: FC = () => {
     }
   };
 
+  /**
+   * Handle form input change
+   *
+   * @param event Input change event
+   */
   const handleInputChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -75,6 +106,11 @@ const AddressForm: FC = () => {
     setFormValues({ [name]: value } as FormValues);
   };
 
+  /**
+   * Handle form submission
+   *
+   * @param event Form event change
+   */
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleAddressValidation();
