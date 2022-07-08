@@ -46,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/user-event": "^14.2.1",
     "prettier": "^2.7.1"
   }
 }
